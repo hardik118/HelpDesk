@@ -6,11 +6,12 @@ import cors from "cors"
 const app = express();
 
 app.use(express.json());
-app.use("/*", cors({
+app.use("*", cors({
   origin: '*',
   methods: ['GET', 'POST', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
-}))
+}));
+
 
 app.use("/api/auth", authRouter);
 app.use("/api/tickets", ticketRouter);
