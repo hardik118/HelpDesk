@@ -9,7 +9,7 @@ const tickets_1 = require("./routes/tickets");
 const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use("/*", (0, cors_1.default)({
+app.use("*", (0, cors_1.default)({
     origin: '*',
     methods: ['GET', 'POST', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
